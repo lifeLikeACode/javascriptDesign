@@ -13,3 +13,4 @@
 // alert(p.getName())
 import './singleton/test'
 import './factory/test'
+import './myjquery/test'
