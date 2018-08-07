@@ -9,7 +9,7 @@ export default class MyJquery {
       this[i] = dom[i]
     }
     this.length = len
-    this.selector = selector
+    
   }
   addClass(val){
     for(let i = 0;i<this.length;i++){
@@ -21,12 +21,8 @@ export default class MyJquery {
     return this
   }
 }
-window.$ = (function(){
-  let instance = null;
+window.$ = (function (){
   return function(selector){
-    if(!instance){
-      instance = new MyJquery(selector)
-    }
-    return instance
+    return new MyJquery(selector)
   }
 })()
